@@ -1,0 +1,194 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('1.png'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tam ekrana uyarlar */
+    background-position: center; /* Resmi ortalar */
+    background-attachment: fixed; /* Arka plan sabit kalır */
+    text-align: center;
+    color: #000; /* Varsayılan yazı rengi aydınlık moda uygun */
+}
+
+/* Karanlık ve Aydınlık Mod Ayarları */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000; /* Karanlık modda arka plan siyah */
+        color: #fff; /* Yazılar beyaz */
+    }
+
+    .inner-box {
+        background-color: rgba(0, 0, 0, 0.8); /* Koyu şeffaf kutu */
+        color: #fff; /* İçerik yazıları beyaz */
+    }
+
+    .found-wallet {
+        background-color: rgba(255, 255, 255, 0.1); /* Şeffaf arka plan */
+        border: 2px solid red;
+    }
+
+    .found-wallet span {
+        color: #fff; /* Cüzdan adresi beyaz */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #000; /* Aydınlık modda arka plan beyaz */
+        color: #FFFFFF; /* Yazılar siyah */
+    }
+
+    .inner-box {
+        background-color: rgba(240, 240, 240, 0.9); /* Açık gri kutu */
+        color: #FFFFFF; /* İçerik yazıları siyah */
+    }
+
+    .found-wallet {
+        background-color: rgba(0, 0, 0, 0.05); /* Açık şeffaf kutu */
+        border: 2px solid red;
+    }
+
+    .found-wallet span {
+        color: #FFFFFF; /* Cüzdan adresi siyah */
+    }
+}
+
+/* Sabit Alt Çerçeve */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px; /* Butonlar arasındaki boşluk */
+    border-top: 2px solid #004080;
+    z-index: 1000;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: #004080;
+}
+
+.icon-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Üst Kısım (Logo ve Başlık) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Start/Stop Butonu */
+.start-btn {
+    font-size: 24px;
+    padding: 10px 30px;
+    background-color: #003;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.start-btn:hover {
+    background-color: #004;
+}
+
+/* Cüzdan Tarama Alanı */
+.wallet-scanner, .statistics {
+    margin: 5px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.transparent-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    border-radius: 5px;
+    height: 300px; /* Sabit yükseklik */
+    box-sizing: border-box;
+    overflow: hidden; /* Kutudan taşmaları gizler */
+}
+
+.inner-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 100%;
+    border-radius: 5px;
+    overflow-y: auto; /* Kaydırma çubuğunu aktif eder */
+    padding: 10px;
+    box-sizing: border-box;
+    color: inherit; /* Yazı rengi genel ayarlarla uyumlu */
+}
+
+/* Bulunan Cüzdanlar */
+#found-wallets {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.found-wallet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
+.found-wallet img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.found-wallet span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Alt Bilgi */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+}
