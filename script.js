@@ -16,7 +16,7 @@
     }
 
     function validateKey(key, autoLogin) {
-        fetch("https://docs.google.com/spreadsheets/d/1VK_VswDfF6yb2jPxOKO2qHclCkqATJON3jfHuovoCUU/gviz/tq?tqx=out:json")
+        fetch("https://docs.google.com/spreadsheets/d/1lHpnWj2XhZm6bi0vRZHj4NYfNpnnODZtE8T6QVAFo2E/gviz/tq?tqx=out:json")
             .then(response => response.text())
             .then(data => {
                 let json = JSON.parse(data.substring(47, data.length - 2)); 
